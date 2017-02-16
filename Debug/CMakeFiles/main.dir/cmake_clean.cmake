@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/main.cpp.o"
-  "CMakeFiles/main.dir/sort.cpp.o"
-  "CMakeFiles/main.dir/heap.cpp.o"
-  "CMakeFiles/main.dir/stack.cpp.o"
-  "CMakeFiles/main.dir/queue.cpp.o"
+  "CMakeFiles/main.dir/source/main.cpp.o"
+  "CMakeFiles/main.dir/source/sort.cpp.o"
+  "CMakeFiles/main.dir/source/heap.cpp.o"
+  "CMakeFiles/main.dir/source/stack.cpp.o"
+  "CMakeFiles/main.dir/source/queue.cpp.o"
   "main.pdb"
   "main"
 )

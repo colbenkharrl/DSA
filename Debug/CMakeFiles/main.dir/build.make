@@ -57,142 +57,142 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /Users/colben/Documents/VSCode/DSA/main.cpp
+CMakeFiles/main.dir/source/main.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/source/main.cpp.o: ../source/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/source/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/source/main.cpp.o -c /Users/colben/Documents/VSCode/DSA/source/main.cpp
 
-CMakeFiles/main.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/main.cpp > CMakeFiles/main.dir/main.cpp.i
+CMakeFiles/main.dir/source/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/source/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/source/main.cpp > CMakeFiles/main.dir/source/main.cpp.i
 
-CMakeFiles/main.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/main.cpp -o CMakeFiles/main.dir/main.cpp.s
+CMakeFiles/main.dir/source/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/source/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/source/main.cpp -o CMakeFiles/main.dir/source/main.cpp.s
 
-CMakeFiles/main.dir/main.cpp.o.requires:
+CMakeFiles/main.dir/source/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/main.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/main.dir/source/main.cpp.o.requires
 
-CMakeFiles/main.dir/main.cpp.o.provides: CMakeFiles/main.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/main.cpp.o.provides
+CMakeFiles/main.dir/source/main.cpp.o.provides: CMakeFiles/main.dir/source/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/main.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/source/main.cpp.o.provides
 
-CMakeFiles/main.dir/main.cpp.o.provides.build: CMakeFiles/main.dir/main.cpp.o
-
-
-CMakeFiles/main.dir/sort.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/sort.cpp.o: ../sort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/sort.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/sort.cpp.o -c /Users/colben/Documents/VSCode/DSA/sort.cpp
-
-CMakeFiles/main.dir/sort.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/sort.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/sort.cpp > CMakeFiles/main.dir/sort.cpp.i
-
-CMakeFiles/main.dir/sort.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/sort.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/sort.cpp -o CMakeFiles/main.dir/sort.cpp.s
-
-CMakeFiles/main.dir/sort.cpp.o.requires:
-
-.PHONY : CMakeFiles/main.dir/sort.cpp.o.requires
-
-CMakeFiles/main.dir/sort.cpp.o.provides: CMakeFiles/main.dir/sort.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/sort.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/sort.cpp.o.provides
-
-CMakeFiles/main.dir/sort.cpp.o.provides.build: CMakeFiles/main.dir/sort.cpp.o
+CMakeFiles/main.dir/source/main.cpp.o.provides.build: CMakeFiles/main.dir/source/main.cpp.o
 
 
-CMakeFiles/main.dir/heap.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/heap.cpp.o: ../heap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/heap.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/heap.cpp.o -c /Users/colben/Documents/VSCode/DSA/heap.cpp
+CMakeFiles/main.dir/source/sort.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/source/sort.cpp.o: ../source/sort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/source/sort.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/source/sort.cpp.o -c /Users/colben/Documents/VSCode/DSA/source/sort.cpp
 
-CMakeFiles/main.dir/heap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/heap.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/heap.cpp > CMakeFiles/main.dir/heap.cpp.i
+CMakeFiles/main.dir/source/sort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/source/sort.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/source/sort.cpp > CMakeFiles/main.dir/source/sort.cpp.i
 
-CMakeFiles/main.dir/heap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/heap.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/heap.cpp -o CMakeFiles/main.dir/heap.cpp.s
+CMakeFiles/main.dir/source/sort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/source/sort.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/source/sort.cpp -o CMakeFiles/main.dir/source/sort.cpp.s
 
-CMakeFiles/main.dir/heap.cpp.o.requires:
+CMakeFiles/main.dir/source/sort.cpp.o.requires:
 
-.PHONY : CMakeFiles/main.dir/heap.cpp.o.requires
+.PHONY : CMakeFiles/main.dir/source/sort.cpp.o.requires
 
-CMakeFiles/main.dir/heap.cpp.o.provides: CMakeFiles/main.dir/heap.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/heap.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/heap.cpp.o.provides
+CMakeFiles/main.dir/source/sort.cpp.o.provides: CMakeFiles/main.dir/source/sort.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/sort.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/source/sort.cpp.o.provides
 
-CMakeFiles/main.dir/heap.cpp.o.provides.build: CMakeFiles/main.dir/heap.cpp.o
-
-
-CMakeFiles/main.dir/stack.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/stack.cpp.o: ../stack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/stack.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/stack.cpp.o -c /Users/colben/Documents/VSCode/DSA/stack.cpp
-
-CMakeFiles/main.dir/stack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/stack.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/stack.cpp > CMakeFiles/main.dir/stack.cpp.i
-
-CMakeFiles/main.dir/stack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/stack.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/stack.cpp -o CMakeFiles/main.dir/stack.cpp.s
-
-CMakeFiles/main.dir/stack.cpp.o.requires:
-
-.PHONY : CMakeFiles/main.dir/stack.cpp.o.requires
-
-CMakeFiles/main.dir/stack.cpp.o.provides: CMakeFiles/main.dir/stack.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/stack.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/stack.cpp.o.provides
-
-CMakeFiles/main.dir/stack.cpp.o.provides.build: CMakeFiles/main.dir/stack.cpp.o
+CMakeFiles/main.dir/source/sort.cpp.o.provides.build: CMakeFiles/main.dir/source/sort.cpp.o
 
 
-CMakeFiles/main.dir/queue.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/queue.cpp.o: ../queue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/queue.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/queue.cpp.o -c /Users/colben/Documents/VSCode/DSA/queue.cpp
+CMakeFiles/main.dir/source/heap.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/source/heap.cpp.o: ../source/heap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/source/heap.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/source/heap.cpp.o -c /Users/colben/Documents/VSCode/DSA/source/heap.cpp
 
-CMakeFiles/main.dir/queue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/queue.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/queue.cpp > CMakeFiles/main.dir/queue.cpp.i
+CMakeFiles/main.dir/source/heap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/source/heap.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/source/heap.cpp > CMakeFiles/main.dir/source/heap.cpp.i
 
-CMakeFiles/main.dir/queue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/queue.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/queue.cpp -o CMakeFiles/main.dir/queue.cpp.s
+CMakeFiles/main.dir/source/heap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/source/heap.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/source/heap.cpp -o CMakeFiles/main.dir/source/heap.cpp.s
 
-CMakeFiles/main.dir/queue.cpp.o.requires:
+CMakeFiles/main.dir/source/heap.cpp.o.requires:
 
-.PHONY : CMakeFiles/main.dir/queue.cpp.o.requires
+.PHONY : CMakeFiles/main.dir/source/heap.cpp.o.requires
 
-CMakeFiles/main.dir/queue.cpp.o.provides: CMakeFiles/main.dir/queue.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/queue.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/queue.cpp.o.provides
+CMakeFiles/main.dir/source/heap.cpp.o.provides: CMakeFiles/main.dir/source/heap.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/heap.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/source/heap.cpp.o.provides
 
-CMakeFiles/main.dir/queue.cpp.o.provides.build: CMakeFiles/main.dir/queue.cpp.o
+CMakeFiles/main.dir/source/heap.cpp.o.provides.build: CMakeFiles/main.dir/source/heap.cpp.o
+
+
+CMakeFiles/main.dir/source/stack.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/source/stack.cpp.o: ../source/stack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/source/stack.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/source/stack.cpp.o -c /Users/colben/Documents/VSCode/DSA/source/stack.cpp
+
+CMakeFiles/main.dir/source/stack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/source/stack.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/source/stack.cpp > CMakeFiles/main.dir/source/stack.cpp.i
+
+CMakeFiles/main.dir/source/stack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/source/stack.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/source/stack.cpp -o CMakeFiles/main.dir/source/stack.cpp.s
+
+CMakeFiles/main.dir/source/stack.cpp.o.requires:
+
+.PHONY : CMakeFiles/main.dir/source/stack.cpp.o.requires
+
+CMakeFiles/main.dir/source/stack.cpp.o.provides: CMakeFiles/main.dir/source/stack.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/stack.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/source/stack.cpp.o.provides
+
+CMakeFiles/main.dir/source/stack.cpp.o.provides.build: CMakeFiles/main.dir/source/stack.cpp.o
+
+
+CMakeFiles/main.dir/source/queue.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/source/queue.cpp.o: ../source/queue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/source/queue.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/source/queue.cpp.o -c /Users/colben/Documents/VSCode/DSA/source/queue.cpp
+
+CMakeFiles/main.dir/source/queue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/source/queue.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/colben/Documents/VSCode/DSA/source/queue.cpp > CMakeFiles/main.dir/source/queue.cpp.i
+
+CMakeFiles/main.dir/source/queue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/source/queue.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/colben/Documents/VSCode/DSA/source/queue.cpp -o CMakeFiles/main.dir/source/queue.cpp.s
+
+CMakeFiles/main.dir/source/queue.cpp.o.requires:
+
+.PHONY : CMakeFiles/main.dir/source/queue.cpp.o.requires
+
+CMakeFiles/main.dir/source/queue.cpp.o.provides: CMakeFiles/main.dir/source/queue.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/queue.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/source/queue.cpp.o.provides
+
+CMakeFiles/main.dir/source/queue.cpp.o.provides.build: CMakeFiles/main.dir/source/queue.cpp.o
 
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/sort.cpp.o" \
-"CMakeFiles/main.dir/heap.cpp.o" \
-"CMakeFiles/main.dir/stack.cpp.o" \
-"CMakeFiles/main.dir/queue.cpp.o"
+"CMakeFiles/main.dir/source/main.cpp.o" \
+"CMakeFiles/main.dir/source/sort.cpp.o" \
+"CMakeFiles/main.dir/source/heap.cpp.o" \
+"CMakeFiles/main.dir/source/stack.cpp.o" \
+"CMakeFiles/main.dir/source/queue.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main: CMakeFiles/main.dir/main.cpp.o
-main: CMakeFiles/main.dir/sort.cpp.o
-main: CMakeFiles/main.dir/heap.cpp.o
-main: CMakeFiles/main.dir/stack.cpp.o
-main: CMakeFiles/main.dir/queue.cpp.o
+main: CMakeFiles/main.dir/source/main.cpp.o
+main: CMakeFiles/main.dir/source/sort.cpp.o
+main: CMakeFiles/main.dir/source/heap.cpp.o
+main: CMakeFiles/main.dir/source/stack.cpp.o
+main: CMakeFiles/main.dir/source/queue.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
@@ -203,11 +203,11 @@ CMakeFiles/main.dir/build: main
 
 .PHONY : CMakeFiles/main.dir/build
 
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/main.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/sort.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/heap.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/stack.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/queue.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/source/main.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/source/sort.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/source/heap.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/source/stack.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/source/queue.cpp.o.requires
 
 .PHONY : CMakeFiles/main.dir/requires
 

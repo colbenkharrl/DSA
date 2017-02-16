@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/colben/Documents/VSCode/DSA/heap.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/heap.cpp.o"
-  "/Users/colben/Documents/VSCode/DSA/main.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/main.cpp.o"
-  "/Users/colben/Documents/VSCode/DSA/queue.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/queue.cpp.o"
-  "/Users/colben/Documents/VSCode/DSA/sort.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/sort.cpp.o"
-  "/Users/colben/Documents/VSCode/DSA/stack.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/stack.cpp.o"
+  "/Users/colben/Documents/VSCode/DSA/source/heap.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/heap.cpp.o"
+  "/Users/colben/Documents/VSCode/DSA/source/main.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/main.cpp.o"
+  "/Users/colben/Documents/VSCode/DSA/source/queue.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/queue.cpp.o"
+  "/Users/colben/Documents/VSCode/DSA/source/sort.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/sort.cpp.o"
+  "/Users/colben/Documents/VSCode/DSA/source/stack.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/stack.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

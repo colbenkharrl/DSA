@@ -123,140 +123,140 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-heap.o: heap.cpp.o
+source/heap.o: source/heap.cpp.o
 
-.PHONY : heap.o
-
-# target to build an object file
-heap.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/heap.cpp.o
-.PHONY : heap.cpp.o
-
-heap.i: heap.cpp.i
-
-.PHONY : heap.i
-
-# target to preprocess a source file
-heap.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/heap.cpp.i
-.PHONY : heap.cpp.i
-
-heap.s: heap.cpp.s
-
-.PHONY : heap.s
-
-# target to generate assembly for a file
-heap.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/heap.cpp.s
-.PHONY : heap.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
+.PHONY : source/heap.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+source/heap.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/heap.cpp.o
+.PHONY : source/heap.cpp.o
 
-main.i: main.cpp.i
+source/heap.i: source/heap.cpp.i
 
-.PHONY : main.i
+.PHONY : source/heap.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+source/heap.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/heap.cpp.i
+.PHONY : source/heap.cpp.i
 
-main.s: main.cpp.s
+source/heap.s: source/heap.cpp.s
 
-.PHONY : main.s
+.PHONY : source/heap.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+source/heap.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/heap.cpp.s
+.PHONY : source/heap.cpp.s
 
-queue.o: queue.cpp.o
+source/main.o: source/main.cpp.o
 
-.PHONY : queue.o
+.PHONY : source/main.o
 
 # target to build an object file
-queue.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/queue.cpp.o
-.PHONY : queue.cpp.o
+source/main.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/main.cpp.o
+.PHONY : source/main.cpp.o
 
-queue.i: queue.cpp.i
+source/main.i: source/main.cpp.i
 
-.PHONY : queue.i
+.PHONY : source/main.i
 
 # target to preprocess a source file
-queue.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/queue.cpp.i
-.PHONY : queue.cpp.i
+source/main.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/main.cpp.i
+.PHONY : source/main.cpp.i
 
-queue.s: queue.cpp.s
+source/main.s: source/main.cpp.s
 
-.PHONY : queue.s
+.PHONY : source/main.s
 
 # target to generate assembly for a file
-queue.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/queue.cpp.s
-.PHONY : queue.cpp.s
+source/main.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/main.cpp.s
+.PHONY : source/main.cpp.s
 
-sort.o: sort.cpp.o
+source/queue.o: source/queue.cpp.o
 
-.PHONY : sort.o
+.PHONY : source/queue.o
 
 # target to build an object file
-sort.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/sort.cpp.o
-.PHONY : sort.cpp.o
+source/queue.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/queue.cpp.o
+.PHONY : source/queue.cpp.o
 
-sort.i: sort.cpp.i
+source/queue.i: source/queue.cpp.i
 
-.PHONY : sort.i
+.PHONY : source/queue.i
 
 # target to preprocess a source file
-sort.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/sort.cpp.i
-.PHONY : sort.cpp.i
+source/queue.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/queue.cpp.i
+.PHONY : source/queue.cpp.i
 
-sort.s: sort.cpp.s
+source/queue.s: source/queue.cpp.s
 
-.PHONY : sort.s
+.PHONY : source/queue.s
 
 # target to generate assembly for a file
-sort.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/sort.cpp.s
-.PHONY : sort.cpp.s
+source/queue.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/queue.cpp.s
+.PHONY : source/queue.cpp.s
 
-stack.o: stack.cpp.o
+source/sort.o: source/sort.cpp.o
 
-.PHONY : stack.o
+.PHONY : source/sort.o
 
 # target to build an object file
-stack.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/stack.cpp.o
-.PHONY : stack.cpp.o
+source/sort.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/sort.cpp.o
+.PHONY : source/sort.cpp.o
 
-stack.i: stack.cpp.i
+source/sort.i: source/sort.cpp.i
 
-.PHONY : stack.i
+.PHONY : source/sort.i
 
 # target to preprocess a source file
-stack.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/stack.cpp.i
-.PHONY : stack.cpp.i
+source/sort.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/sort.cpp.i
+.PHONY : source/sort.cpp.i
 
-stack.s: stack.cpp.s
+source/sort.s: source/sort.cpp.s
 
-.PHONY : stack.s
+.PHONY : source/sort.s
 
 # target to generate assembly for a file
-stack.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/stack.cpp.s
-.PHONY : stack.cpp.s
+source/sort.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/sort.cpp.s
+.PHONY : source/sort.cpp.s
+
+source/stack.o: source/stack.cpp.o
+
+.PHONY : source/stack.o
+
+# target to build an object file
+source/stack.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/stack.cpp.o
+.PHONY : source/stack.cpp.o
+
+source/stack.i: source/stack.cpp.i
+
+.PHONY : source/stack.i
+
+# target to preprocess a source file
+source/stack.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/stack.cpp.i
+.PHONY : source/stack.cpp.i
+
+source/stack.s: source/stack.cpp.s
+
+.PHONY : source/stack.s
+
+# target to generate assembly for a file
+source/stack.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/stack.cpp.s
+.PHONY : source/stack.cpp.s
 
 # Help Target
 help:
@@ -267,21 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... heap.o"
-	@echo "... heap.i"
-	@echo "... heap.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... queue.o"
-	@echo "... queue.i"
-	@echo "... queue.s"
-	@echo "... sort.o"
-	@echo "... sort.i"
-	@echo "... sort.s"
-	@echo "... stack.o"
-	@echo "... stack.i"
-	@echo "... stack.s"
+	@echo "... source/heap.o"
+	@echo "... source/heap.i"
+	@echo "... source/heap.s"
+	@echo "... source/main.o"
+	@echo "... source/main.i"
+	@echo "... source/main.s"
+	@echo "... source/queue.o"
+	@echo "... source/queue.i"
+	@echo "... source/queue.s"
+	@echo "... source/sort.o"
+	@echo "... source/sort.i"
+	@echo "... source/sort.s"
+	@echo "... source/stack.o"
+	@echo "... source/stack.i"
+	@echo "... source/stack.s"
 .PHONY : help
 
 
