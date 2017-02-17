@@ -9,14 +9,18 @@ using namespace std;
 
 int main()
 {
-    int *A = new int[8];
-    int j = 7;
-    for (int i = 0; i < 8; i++)
+    int *A = new int[7];
+	int j = 50;
+    for (int i = 0; i < 7; i++)	// fill array with non-sorted numbers
     {
-	A[i] = j;
-	j--;
+		A[i] = j;
+		if (i % 2 == 0) {
+			j += i * 2;
+		} else {
+			j -= i * 3;
+		}
     }
-    PrintList(A, 0, 7);
-    QuickSort(A, 0, 7);
-    PrintList(A, 0, 7);
+    PrintList(A, 0, 6);
+	int res = Select(A, 3, 0, 6);
+    cout << "3rd smallest element: " << res << endl;
 }

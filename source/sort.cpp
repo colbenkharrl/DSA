@@ -90,7 +90,6 @@ void HeapSort(int *A, int size)
 	heap.Heapify(1);
     }
 }
-
 void QuickSort(int *A, int p, int r)
 {
     if (p < r)
@@ -119,4 +118,72 @@ int Partition(int *A, int p, int r)
     A[i + 1] = A[r];
     A[r] = temp;
     return i + 1;
+}
+//	partition variation to choose pivot value k
+int PartitionAt(int *A, int p, int r, int k) {
+	int i, j, l, temp;
+	for (l = p; l <= r; l++) {
+		if (A[l] == k) {
+			temp = A[l];
+	    	A[l] = A[r];
+	    	A[r] = temp;
+		}
+	}
+    i = p - 1;
+    for (j = p; j < r; j++)
+    {
+	if (A[j] <= k)
+	{
+	    i++;
+	    temp = A[i];
+	    A[i] = A[j];
+	    A[j] = temp;
+	}
+    }
+    temp = A[i + 1];
+    A[i + 1] = A[r];
+    A[r] = temp;
+    return i + 2 - p;
+}
+//	returns the median of the elements between indexes
+int Median(int *A, int start, int end) {
+	int index, size, i;
+	int* I;
+	size = end-start+1;
+	I = new int[size];
+	index = 0;
+	for (i = start; i <= end; i++) {
+		I[index] = A[i];
+		index++;
+	}
+	InsertionSort(I, size);
+	return I[size/2];
+}
+//	selects ith smallest element using median-of-medians method
+int Select(int *A, int i, int start, int end) {
+	int size, arrays, x, k, j;
+	int *medians, *I;
+	size = end - start + 1;
+	if (size % 5 == 0) {
+		arrays = size / 5;
+	} else {
+		arrays = (size / 5) + 1;
+	}
+	medians = new int [arrays];
+	for (j = 0; j < arrays; j++) {
+		if (j == arrays-1) {
+			medians[j]  = Median(A, start+j*5, end);
+		} else {
+			medians[j]  = Median(A, start+(j*5), start+((j+1)*5-1));
+		}
+	}
+	x = Median(medians, 0, arrays-1);
+	k = PartitionAt(A, start, end, x);
+	if (i == k) {
+		return x;
+	} else if (i < k) {
+		return Select(A, i, start, k-2);
+	} else {
+		return Select(A, i-k, k, end);
+	}
 }
