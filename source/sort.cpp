@@ -9,14 +9,15 @@ using namespace std;
 
 //	print dynamic array from index start to end
 void PrintList(int *A, int start, int end) {
-  for (int i = start; i <= end; i++) {
+  int i;
+  for (i = start; i <= end; i++) {
     cout << A[i] << " ";
   }
   cout << endl;
 }
 void InsertionSort(int *A, int length) {
-  int key, i;
-  for (int j = 1; j < length; j++) {
+  int key, i, j;
+  for (j = 1; j < length; j++) {
     key = A[j];
     i = j - 1;
     while (i > -1 and A[i] > key) {
@@ -28,10 +29,11 @@ void InsertionSort(int *A, int length) {
 }
 void Merge(int *A, int p, int q, int r) {
   int n1, n2, i, j, k;
+  int *L, *R;
   n1 = q - p + 1;
   n2 = r - q;
-  int *L = new int[n1 + 1];
-  int *R = new int[n2 + 1];
+  L = new int[n1 + 1];
+  R = new int[n2 + 1];
   for (i = 0; i < n1; i++) {
     L[i] = A[p + i];
   }
@@ -61,10 +63,10 @@ void MergeSort(int *A, int p, int r) {
     Merge(A, p, q, r);
   }
 }
-void HeapSort(int *A, int size) {
-  int temp;
-  Heap heap(A, size);
-  for (int i = size - 1; i > 0; i--) {
+void HeapSort(int *A, int length) {
+  int temp, i;
+  Heap heap(A, length);
+  for (i = length - 1; i > 0; i--) {
     temp = A[0];
     A[0] = A[i];
     A[i] = temp;
@@ -73,10 +75,11 @@ void HeapSort(int *A, int size) {
   }
 }
 void BubbleSort(int *A, int length) {
-	for (int i = 0; i < length-1; i++) {
-		for (int j = length-1; j > i; j--) {
+	int i, j, temp;
+	for (i = 0; i < length-1; i++) {
+		for (j = length-1; j > i; j--) {
 			if (A[j] < A[j-1]) {
-				int temp = A[j];
+				temp = A[j];
 				A[j] = A[j-1];
 				A[j-1] = temp;
 			}
@@ -151,43 +154,43 @@ int PartitionAt(int *A, int p, int r, int k) {
 //		5. If i != k, then return x. Otherwise, use SELECT recursively to find the ith
 //			smallest element on the low side if i < k, or the (i-k)th smallest element on
 //			the high side if i > k.
-int Select(int *A, int i, int start, int end) {
-  int size, arrays, x, k, j, iter, startIn, endIn;
+int Select(int *A, int i, int p, int r) {
+  int length, arrays, x, k, j, l, startIn, endIn;
   int *medians, *I, *arr;
-  size = end - start + 1;
-  if (size == 1) {
-    return A[start];
+  length = r - p + 1;
+  if (length == 1) {
+    return A[p];
   }
-  if (size % 5 == 0) {
-    arrays = size / 5;
+  if (length % 5 == 0) {
+    arrays = length / 5;
   } else {
-    arrays = (size / 5) + 1;
+    arrays = (length / 5) + 1;
   }
   medians = new int[arrays];
   for (j = 0; j < arrays; j++) {
-    startIn = start + j * 5;
+    startIn = p + j * 5;
     if (j == arrays - 1) {
-      endIn = end;
-      size = endIn - startIn + 1;
+      endIn = r;
+      length = endIn - startIn + 1;
     } else {
-      endIn = start + ((j + 1) * 5 - 1);
-      size = 5;
+      endIn = p + ((j + 1) * 5 - 1);
+      length = 5;
     }
-    arr = new int[size];
-    for (iter = 0; iter < size; iter++) {
-      arr[iter] = A[startIn + iter];
+    arr = new int[length];
+    for (l = 0; l < length; l++) {
+      arr[l] = A[startIn + l];
     }
-    InsertionSort(arr, size);
-    medians[j] = arr[size / 2];
+    InsertionSort(arr, length);
+    medians[j] = arr[length / 2];
   }
 
   x = Select(medians, (arrays / 2) + 1, 0, arrays - 1);
-  k = PartitionAt(A, start, end, x);
+  k = PartitionAt(A, p, r, x);
   if (i == k) {
     return x;
   } else if (i < k) {
-    return Select(A, i, start, k - 2);
+    return Select(A, i, p, k - 2);
   } else {
-    return Select(A, i - k, k, end);
+    return Select(A, i - k, k, r);
   }
 }
