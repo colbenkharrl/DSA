@@ -127,6 +127,7 @@ int PartitionAt(int *A, int p, int r, int k) {
 			temp = A[l];
 	    	A[l] = A[r];
 	    	A[r] = temp;
+			break;
 		}
 	}
     i = p - 1;
@@ -159,7 +160,7 @@ int Median(int *A, int start, int end) {
 	InsertionSort(I, size);
 	return I[size/2];
 }
-//	selects ith smallest element using median-of-medians method
+//	recursively selects ith smallest element using median-of-medians method
 int Select(int *A, int i, int start, int end) {
 	int size, arrays, x, k, j;
 	int *medians, *I;
