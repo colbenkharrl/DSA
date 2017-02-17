@@ -121,7 +121,7 @@ int PartitionAt(int *A, int p, int r, int k) {
   A[r] = temp;
   return i + 2 - p;
 }
-//	recursively selects ith smallest element using Median-of-Medians method
+//	recursively selects ith smallest element using Median-of-Medians method:
 //
 //	5 steps:
 //		1. Divide the n elements of the input array into floor(n/5) groups
