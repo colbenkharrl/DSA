@@ -1,5 +1,3 @@
-//      Colben Kharrl | HEAP DATA STRUCTURE
-
 class Heap
 {
   private:
@@ -20,5 +18,5 @@ class Heap
     int Parent(int i);
     int Left(int i);
     int Right(int i);
-	void Print();
+    void Print();
 };

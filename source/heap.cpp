@@ -1,23 +1,26 @@
-//      Colben Kharrl | HEAP DATA STRUCTURE
+//      Colben Kharrl | HEAP DATA STRUCTURE (for dynamic arrays)
 
 #include "heap.h"
 #include <iostream>
 #include <limits>
 
 using namespace std;
-
+//	returns index of parent node
 int Heap::Parent(int i)
 {
     return i / 2;
 }
+//	returns index of left child
 int Heap::Left(int i)
 {
     return 2 * i;
 }
+//	returns index of right child
 int Heap::Right(int i)
 {
     return 2 * i + 1;
 }
+//	recursively apply the heap property to nodes at and below index
 void Heap::Heapify(int i)
 {
     int largest, temp;
@@ -43,6 +46,7 @@ void Heap::Heapify(int i)
 	Heapify(largest);
     }
 }
+//	build a heap from an array
 void Heap::BuildHeap()
 {
     for (int i = heapSize / 2; i > 0; i--)
@@ -50,12 +54,14 @@ void Heap::BuildHeap()
 	Heapify(i);
     }
 }
+//	constructor to build the array internally
 Heap::Heap(int size)
 {
     heapSize = 0;
     A = new int[size];
     passed = 0;
 }
+//	constructor to pass an existing dynamic array
 Heap::Heap(int *I, int size)
 {
     A = I;
@@ -63,6 +69,7 @@ Heap::Heap(int *I, int size)
     BuildHeap();
     passed = 1;
 }
+//	destructor to delete the array if it was created internally
 Heap::~Heap()
 {
     if (!passed)
@@ -70,10 +77,12 @@ Heap::~Heap()
 	delete[] A;
     }
 }
+//	return the largest key in the heap
 int Heap::Maximum()
 {
     return A[0];
 }
+//	remove and return the largest key node
 int Heap::ExtractMax()
 {
     int max;
@@ -91,6 +100,7 @@ int Heap::ExtractMax()
 	return max;
     }
 }
+//	insert a node with value key into the heap
 void Heap::Insert(int key)
 {
     int i;
@@ -98,6 +108,7 @@ void Heap::Insert(int key)
     A[heapSize] = 0 - numeric_limits<int>::max();
     IncreaseKey(heapSize, key);
 }
+//	increase the key of value at index
 void Heap::IncreaseKey(int i, int key)
 {
     int temp;
@@ -117,10 +128,12 @@ void Heap::IncreaseKey(int i, int key)
 	}
     }
 }
-
-void Heap::Print() {
-	for (int i = 0; i < heapSize; i++) {
-		cout << A[i] << " ";
-	}
-	cout << endl;
+//	print the heap
+void Heap::Print()
+{
+    for (int i = 0; i < heapSize; i++)
+    {
+	cout << A[i] << " ";
+    }
+    cout << endl;
 }

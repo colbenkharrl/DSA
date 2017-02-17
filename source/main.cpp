@@ -4,16 +4,19 @@
 #include "stack.h"
 #include <iostream>
 
+//	used for testing and debugging
 using namespace std;
 
-int main() {
-  int *A = new int[8];
-  int j = 7;
-  for (int i = 0; i < 8; i++) {
+int main()
+{
+    int *A = new int[8];
+    int j = 7;
+    for (int i = 0; i < 8; i++)
+    {
 	A[i] = j;
 	j--;
-  }
-  PrintList(A, 0, 7);
-  QuickSort(A, 0, 7);
-  PrintList(A, 0, 7);
+    }
+    PrintList(A, 0, 7);
+    QuickSort(A, 0, 7);
+    PrintList(A, 0, 7);
 }

@@ -1,4 +1,4 @@
-//      SORTING ALGORITHMS
+//      Colben Kharrl | SORTING ALGORITHMS (for dynamic arrays)
 
 #include "sort.h"
 #include "heap.h"
@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//	print dynamic array from index start to end
 void PrintList(int *A, int start, int end)
 {
     for (int i = start; i <= end; i++)
@@ -15,7 +16,6 @@ void PrintList(int *A, int start, int end)
     }
     cout << endl;
 }
-
 void InsertionSort(int *A, int length)
 {
     int key, i;
@@ -34,7 +34,7 @@ void InsertionSort(int *A, int length)
 
 void Merge(int *A, int p, int q, int r)
 {
-	int n1, n2, i, j, k;
+    int n1, n2, i, j, k;
     n1 = q - p + 1;
     n2 = r - q;
     int *L = new int[n1 + 1];
@@ -91,27 +91,32 @@ void HeapSort(int *A, int size)
     }
 }
 
-void QuickSort(int *A, int p, int r) {
-	if (p < r) {
-		int q = Partition(A, p, r);
-		QuickSort(A, p, q-1);
-		QuickSort(A, q+1, r);
-	}
+void QuickSort(int *A, int p, int r)
+{
+    if (p < r)
+    {
+	int q = Partition(A, p, r);
+	QuickSort(A, p, q - 1);
+	QuickSort(A, q + 1, r);
+    }
 }
-int Partition(int *A, int p, int r) {
-	int x, i, j, temp;
-	x = A[r];
-	i = p-1;
-	for (j = p; j < r; j++) {
-		if (A[j] <= x) {
-			i++;
-			temp = A[i];
-			A[i] = A[j];
-			A[j] = temp;
-		}
+int Partition(int *A, int p, int r)
+{
+    int x, i, j, temp;
+    x = A[r];
+    i = p - 1;
+    for (j = p; j < r; j++)
+    {
+	if (A[j] <= x)
+	{
+	    i++;
+	    temp = A[i];
+	    A[i] = A[j];
+	    A[j] = temp;
 	}
-	temp = A[i+1];
-	A[i+1] = A[r];
-	A[r] = temp;
-	return i+1;
+    }
+    temp = A[i + 1];
+    A[i + 1] = A[r];
+    A[r] = temp;
+    return i + 1;
 }
