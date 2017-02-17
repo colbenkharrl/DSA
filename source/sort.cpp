@@ -75,16 +75,16 @@ void HeapSort(int *A, int length) {
   }
 }
 void BubbleSort(int *A, int length) {
-	int i, j, temp;
-	for (i = 0; i < length-1; i++) {
-		for (j = length-1; j > i; j--) {
-			if (A[j] < A[j-1]) {
-				temp = A[j];
-				A[j] = A[j-1];
-				A[j-1] = temp;
-			}
-		}
-	}
+  int i, j, temp;
+  for (i = 0; i < length - 1; i++) {
+    for (j = length - 1; j > i; j--) {
+      if (A[j] < A[j - 1]) {
+        temp = A[j];
+        A[j] = A[j - 1];
+        A[j - 1] = temp;
+      }
+    }
+  }
 }
 void QuickSort(int *A, int p, int r) {
   if (p < r) {
