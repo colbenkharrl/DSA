@@ -3,6 +3,7 @@ void Merge(int *A, int p, int q, int r);
 void MergeSort(int *A, int p, int r);
 void HeapSort(int *A, int size);
 void QuickSort(int *A, int p, int r);
+void BubbleSort(int* A, int length);
 int Partition(int *A, int p, int r);
 void PrintList(int *A, int start, int end);
 int PartitionAt(int *A, int start, int end, int k);

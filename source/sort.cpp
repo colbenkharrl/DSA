@@ -72,6 +72,17 @@ void HeapSort(int *A, int size) {
     heap.Heapify(1);
   }
 }
+void BubbleSort(int *A, int length) {
+	for (int i = 0; i < length-1; i++) {
+		for (int j = length-1; j > i; j--) {
+			if (A[j] < A[j-1]) {
+				int temp = A[j];
+				A[j] = A[j-1];
+				A[j-1] = temp;
+			}
+		}
+	}
+}
 void QuickSort(int *A, int p, int r) {
   if (p < r) {
     int q = Partition(A, p, r);
