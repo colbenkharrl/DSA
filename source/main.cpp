@@ -20,6 +20,6 @@ int main() {
     }
   }
   PrintList(A, 0, 6);
-  int res = Select(A, 6, 0, 6);
-  cout << "6th smallest element: " << res << endl;
+  int res = Select(A, 7, 0, 6);
+  cout << "7th smallest element: " << res << endl;
 }
