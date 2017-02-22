@@ -8,9 +8,9 @@
 using namespace std;
 
 //	print dynamic array from index start to end
-void PrintList(int *A, int start, int end) {
+void PrintList(int *A, int p, int r) {
   int i;
-  for (i = start; i <= end; i++) {
+  for (i = p; i <= r; i++) {
     cout << A[i] << " ";
   }
   cout << endl;
@@ -181,9 +181,12 @@ int Select(int *A, int i, int p, int r) {
       arr[l] = A[startIn + l];
     }
     InsertionSort(arr, length);
-    medians[j] = arr[length / 2];
+	if (length % 2 == 0) {
+		medians[j] = arr[(length / 2)-1];
+	} else {
+		medians[j] = arr[length / 2];
+	}
   }
-
   x = Select(medians, (arrays / 2) + 1, 0, arrays - 1);
   k = PartitionAt(A, p, r, x);
   if (i == k) {
