@@ -162,7 +162,7 @@ int Select(int *A, int i, int p, int r) {
   if (length == 1) {
     return A[p];
   }
-  arrays = int(ceil(double(length/5)));
+  arrays = int(ceil(double(length)/5));
   medians = new int[arrays];
   for (j = 0; j < arrays; j++) {	// 1
     startIn = p + j * 5;
@@ -178,15 +178,15 @@ int Select(int *A, int i, int p, int r) {
       arr[l] = A[startIn + l];
     }
     InsertionSort(arr, length);		// 2
-	medians[j] = arr[int(ceil(double((length-1)/ 2)))];
+	medians[j] = arr[int(floor(double(length-1)/2))];
   }
-  x = Select(medians, (arrays / 2) + 1, 0, arrays - 1);		// 3
+  x = Select(medians, int(ceil(double(arrays-1)/2)), 0, arrays - 1);		// 3
   k = PartitionAt(A, p, r, x);		// 4
   if (i == k) {		// 5
     return x;
   } else if (i < k) {
     return Select(A, i, p, k - 2);
   } else {
-    return Select(A, i - k, k, r);
+    return Select(A, i - k, p+k, r);
   }
 }

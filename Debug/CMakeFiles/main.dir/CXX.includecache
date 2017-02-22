@@ -27,6 +27,8 @@ stack.h
 /Users/colben/Documents/VSCode/DSA/source/stack.h
 iostream
 -
+cstdlib
+-
 
 /Users/colben/Documents/VSCode/DSA/source/queue.cpp
 queue.h
