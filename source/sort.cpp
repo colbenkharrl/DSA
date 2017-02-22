@@ -54,6 +54,8 @@ void Merge(int *A, int p, int q, int r) {
       j++;
     }
   }
+  delete [] L;
+  delete [] R;
 }
 void MergeSort(int *A, int p, int r) {
   int q;
@@ -157,7 +159,7 @@ int PartitionAt(int *A, int p, int r, int k) {
 //			the high side if i > k.
 int Select(int *A, int i, int p, int r) {
   int length, arrays, x, k, j, l, startIn, endIn;
-  int *medians, *I, *arr;
+  int *medians, *arr;
   length = r - p + 1;
   if (length == 1) {
     return A[p];
@@ -179,8 +181,10 @@ int Select(int *A, int i, int p, int r) {
     }
     InsertionSort(arr, length);		// 2
 	medians[j] = arr[int(floor(double(length-1)/2))];
+	delete [] arr;
   }
   x = Select(medians, int(ceil(double(arrays-1)/2)), 0, arrays - 1);		// 3
+  delete [] medians;
   k = PartitionAt(A, p, r, x);		// 4
   if (i == k) {		// 5
     return x;

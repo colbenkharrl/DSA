@@ -18,6 +18,7 @@ int main() {
 	A[i] = element;
   }
   PrintList(A, 0, 9);
-  int res = Select(A, 1, 0, 9);
-  cout << "1st smallest element: " << res << endl;
+  MergeSort(A, 0, 9);
+  PrintList(A, 0, 9);
+  delete [] A;
 }

@@ -11,6 +11,7 @@ Stack::Stack(int s)
     A = new int[size];
     size = s;
     top = 0;
+	passed = 0;
 }
 //	constructor for passing a dynamic array
 Stack::Stack(int *I, int t, int s)
@@ -18,6 +19,7 @@ Stack::Stack(int *I, int t, int s)
     A = I;
     size = s;
     top = t;
+	passed = 1;
 }
 //	destructor to delete list if created internally
 Stack::~Stack()
