@@ -3,6 +3,7 @@
 #include "sort.h"
 #include "heap.h"
 #include <iostream>
+#include <math.h>
 #include <limits>
 
 using namespace std;
@@ -181,11 +182,7 @@ int Select(int *A, int i, int p, int r) {
       arr[l] = A[startIn + l];
     }
     InsertionSort(arr, length);
-	if (length % 2 == 0) {
-		medians[j] = arr[(length / 2)-1];
-	} else {
-		medians[j] = arr[length / 2];
-	}
+	medians[j] = arr[int(ceil(double((length-1)/ 2)))];
   }
   x = Select(medians, (arrays / 2) + 1, 0, arrays - 1);
   k = PartitionAt(A, p, r, x);
