@@ -53,11 +53,11 @@ int main()
     delete[] A;
 	cout << "Disjoint set 'i:A[i]': " << endl;
 	DisjointSet set (length);
-	set.PrintSet();
+	set.Print();
 	set.Union(1, 2);
-	set.PrintSet();
+	set.Print();
 	set.Union(4,5);
-	set.PrintSet();
-	set.Union(5,2);
-	set.PrintSet();
+	set.Print();
+	set.Union(4,1);
+	set.Print();
 }
