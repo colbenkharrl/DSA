@@ -51,7 +51,7 @@ int main()
     x = Select(A, 3, 0, length-1);
     cout << "3rd smallest element: " << x << endl;
     delete[] A;
-
+	cout << "Disjoint set 'i:A[i]': " << endl;
 	DisjointSet set (length);
 	set.PrintSet();
 	set.Union(1, 2);

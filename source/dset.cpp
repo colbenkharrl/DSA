@@ -40,7 +40,7 @@ void DisjointSet::Union(int x, int y) {
 
 void DisjointSet::PrintSet() {
 	for (int i = 0; i < ulength; i++) {
-		cout << "(" << i << ")[" << A[i] << "] ";
+		cout << i << ":" << A[i] << " ";
 	}
 	cout << endl;
 }
