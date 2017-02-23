@@ -73,7 +73,7 @@ void HeapSort(int *A, int length) {
     temp = A[0];
     A[0] = A[i];
     A[i] = temp;
-    heap.heapSize--;
+    heap.heaplength--;
     heap.Heapify(1);
   }
 }

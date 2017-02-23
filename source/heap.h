@@ -5,9 +5,9 @@ class Heap
     int passed;
 
   public:
-    int heapSize;
-    Heap(int size);
-    Heap(int *I, int size);
+    int heaplength;
+    Heap(int length);
+    Heap(int *I, int length);
     ~Heap();
     void Heapify(int i);
     void BuildHeap();

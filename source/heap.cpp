@@ -26,7 +26,7 @@ void Heap::Heapify(int i)
     int largest, temp;
     int l = Left(i);
     int r = Right(i);
-    if (l <= heapSize && A[l - 1] > A[i - 1])
+    if (l <= heaplength && A[l - 1] > A[i - 1])
     {
 	largest = l;
     }
@@ -34,7 +34,7 @@ void Heap::Heapify(int i)
     {
 	largest = i;
     }
-    if (r <= heapSize && A[r - 1] > A[largest - 1])
+    if (r <= heaplength && A[r - 1] > A[largest - 1])
     {
 	largest = r;
     }
@@ -49,23 +49,23 @@ void Heap::Heapify(int i)
 //	build a heap from an array
 void Heap::BuildHeap()
 {
-    for (int i = heapSize / 2; i > 0; i--)
+    for (int i = heaplength / 2; i > 0; i--)
     {
 	Heapify(i);
     }
 }
 //	constructor to build the array internally
-Heap::Heap(int size)
+Heap::Heap(int length)
 {
-    heapSize = 0;
-    A = new int[size];
+    heaplength = 0;
+    A = new int[length];
     passed = 0;
 }
 //	constructor to pass an existing dynamic array
-Heap::Heap(int *I, int size)
+Heap::Heap(int *I, int length)
 {
     A = I;
-    heapSize = size;
+    heaplength = length;
     BuildHeap();
     passed = 1;
 }
@@ -86,7 +86,7 @@ int Heap::Maximum()
 int Heap::ExtractMax()
 {
     int max;
-    if (heapSize <= 1)
+    if (heaplength <= 1)
     {
 	cout << "Error: no elements to be extracted." << endl;
 	return -1;
@@ -94,8 +94,8 @@ int Heap::ExtractMax()
     else
     {
 	max = A[0];
-	A[0] = A[heapSize - 1];
-	heapSize--;
+	A[0] = A[heaplength - 1];
+	heaplength--;
 	Heapify(0);
 	return max;
     }
@@ -104,9 +104,9 @@ int Heap::ExtractMax()
 void Heap::Insert(int key)
 {
     int i;
-    heapSize++;
-    A[heapSize] = 0 - numeric_limits<int>::max();
-    IncreaseKey(heapSize, key);
+    heaplength++;
+    A[heaplength] = 0 - numeric_limits<int>::max();
+    IncreaseKey(heaplength, key);
 }
 //	increase the key of value at index
 void Heap::IncreaseKey(int i, int key)
@@ -131,7 +131,7 @@ void Heap::IncreaseKey(int i, int key)
 //	print the heap
 void Heap::Print()
 {
-    for (int i = 0; i < heapSize; i++)
+    for (int i = 0; i < heaplength; i++)
     {
 	cout << A[i] << " ";
     }
