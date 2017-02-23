@@ -1,7 +1,9 @@
+#include "dset.h"
 #include "heap.h"
 #include "queue.h"
 #include "sort.h"
 #include "stack.h"
+
 #include <iostream>
 #include <cstdlib>
 
@@ -49,4 +51,13 @@ int main()
     x = Select(A, 3, 0, length-1);
     cout << "3rd smallest element: " << x << endl;
     delete[] A;
+
+	DisjointSet set (length);
+	set.PrintSet();
+	set.Union(1, 2);
+	set.PrintSet();
+	set.Union(4,5);
+	set.PrintSet();
+	set.Union(5,2);
+	set.PrintSet();
 }

@@ -7,10 +7,10 @@ class DisjointSet
 	public:
 		int ulength;
 		DisjointSet(int length);
-		DisjointSet(int* I, int length);
 		~DisjointSet();
 		void MakeSet(int x);
 		void Link(int x, int y);
 		int FindSet(int x);
 		void Union(int x, int y);
+		void PrintSet();
 };

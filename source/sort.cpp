@@ -126,7 +126,7 @@ int PartitionAt(int *A, int p, int r, int k) {
   }
   i = p - 1;
   for (j = p; j < r; j++) {
-    if (A[j] <= k) {
+    if (A[j] < k) {
       i++;
       temp = A[i];
       A[i] = A[j];
@@ -186,6 +186,7 @@ int Select(int *A, int i, int p, int r) {
   x = Select(medians, int(ceil(double(arrays-1)/2)), 0, arrays - 1);		// 3
   delete [] medians;
   k = PartitionAt(A, p, r, x);		// 4
+  PrintList(A, p, r);
   if (i == k) {		// 5
     return x;
   } else if (i < k) {

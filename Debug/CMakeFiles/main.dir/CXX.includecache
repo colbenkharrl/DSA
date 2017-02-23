@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/Users/colben/Documents/VSCode/DSA/source/dset.cpp
+dset.h
+/Users/colben/Documents/VSCode/DSA/source/dset.h
+iostream
+-
+
+/Users/colben/Documents/VSCode/DSA/source/dset.h
+
 /Users/colben/Documents/VSCode/DSA/source/heap.cpp
 heap.h
 /Users/colben/Documents/VSCode/DSA/source/heap.h
@@ -17,6 +25,8 @@ limits
 /Users/colben/Documents/VSCode/DSA/source/heap.h
 
 /Users/colben/Documents/VSCode/DSA/source/main.cpp
+dset.h
+/Users/colben/Documents/VSCode/DSA/source/dset.h
 heap.h
 /Users/colben/Documents/VSCode/DSA/source/heap.h
 queue.h

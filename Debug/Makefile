@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+source/dset.o: source/dset.cpp.o
+
+.PHONY : source/dset.o
+
+# target to build an object file
+source/dset.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/dset.cpp.o
+.PHONY : source/dset.cpp.o
+
+source/dset.i: source/dset.cpp.i
+
+.PHONY : source/dset.i
+
+# target to preprocess a source file
+source/dset.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/dset.cpp.i
+.PHONY : source/dset.cpp.i
+
+source/dset.s: source/dset.cpp.s
+
+.PHONY : source/dset.s
+
+# target to generate assembly for a file
+source/dset.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/dset.cpp.s
+.PHONY : source/dset.cpp.s
+
 source/heap.o: source/heap.cpp.o
 
 .PHONY : source/heap.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... source/dset.o"
+	@echo "... source/dset.i"
+	@echo "... source/dset.s"
 	@echo "... source/heap.o"
 	@echo "... source/heap.i"
 	@echo "... source/heap.s"

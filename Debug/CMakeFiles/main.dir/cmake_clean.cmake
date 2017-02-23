@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/source/heap.cpp.o"
   "CMakeFiles/main.dir/source/stack.cpp.o"
   "CMakeFiles/main.dir/source/queue.cpp.o"
+  "CMakeFiles/main.dir/source/dset.cpp.o"
   "main.pdb"
   "main"
 )

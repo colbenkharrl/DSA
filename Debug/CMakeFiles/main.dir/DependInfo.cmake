@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/colben/Documents/VSCode/DSA/source/dset.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/dset.cpp.o"
   "/Users/colben/Documents/VSCode/DSA/source/heap.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/heap.cpp.o"
   "/Users/colben/Documents/VSCode/DSA/source/main.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/main.cpp.o"
   "/Users/colben/Documents/VSCode/DSA/source/queue.cpp" "/Users/colben/Documents/VSCode/DSA/Debug/CMakeFiles/main.dir/source/queue.cpp.o"
