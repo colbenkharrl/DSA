@@ -8,14 +8,15 @@ Dynamic memory used as much as possible.
 # Currently Implemented:
 
 - Sorting Algorithms:
-  1. Insertion Sort
-  2. Merge Sort
-  3. QuickSort
-  4. Bubble Sort
-  5. Heap Sort
+  1. Insertion Sort - O(n^2)
+  2. Merge Sort - O(n logn)
+  3. QuickSort - O(n^2)
+  4. Bubble Sort - O(n^2)
+  5. Heap Sort - O(n logn)
 - Selection Algorithms
-  1. Median-of-Medians Selection (linear)
+  1. Median Selection - O(n)
 - Data Structures
   1. Stack
   2. Queue
   3. Heap
+  4. Disjoint Set
