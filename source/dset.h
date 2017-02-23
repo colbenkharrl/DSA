@@ -12,5 +12,5 @@ class DisjointSet
 		void Link(int x, int y);
 		int FindSet(int x);
 		void Union(int x, int y);
-		void PrintSet();
+		void Print();
 };

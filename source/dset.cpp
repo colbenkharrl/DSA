@@ -38,7 +38,7 @@ void DisjointSet::Union(int x, int y) {
 	Link(FindSet(x), FindSet(y));
 }
 
-void DisjointSet::PrintSet() {
+void DisjointSet::Print() {
 	for (int i = 0; i < ulength; i++) {
 		cout << i << ":" << A[i] << " ";
 	}
