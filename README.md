@@ -18,5 +18,5 @@ Dynamic memory used as much as possible.
 - Data Structures
   1. Stack
   2. Queue
-  3. Heap
-  4. Disjoint Set
+  3. Heap (min and max)
+  4. Disjoint Set (path compression)
