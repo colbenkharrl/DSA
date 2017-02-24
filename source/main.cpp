@@ -24,40 +24,9 @@ void Randomize(int *I, int length)
 
 int main()
 {
-    int length = 10, x;
+    int length = 20, x;
     int *A = new int[length];
-	cout << "Insertion Sort:" << endl;
 	Randomize(A, length);
-    InsertionSort(A, length);
+	MinHeap heap (A, length);
     PrintList(A, 0, length-1);
-	cout << "Bubble Sort:" << endl;
-	Randomize(A, length);
-    BubbleSort(A, length);
-    PrintList(A, 0, length-1);
-	cout << "Quick Sort:" << endl;
-	Randomize(A, length);
-    QuickSort(A, 0, length-1);
-    PrintList(A, 0, length-1);
-    cout << "Merge Sort:" << endl;
-	Randomize(A, length);
-    MergeSort(A, 0, length-1);
-    PrintList(A, 0, length-1);
-	cout << "Heap Sort:" << endl;
-	Randomize(A, length);
-    HeapSort(A, length);
-    PrintList(A, 0, length-1);
-	cout << "Median Selection (linear):" << endl;
-	Randomize(A, length);
-    x = Select(A, 3, 0, length-1);
-    cout << "3rd smallest element: " << x << endl;
-    delete[] A;
-	cout << "Disjoint set 'i:A[i]': " << endl;
-	DisjointSet set (length);
-	set.Print();
-	set.Union(1, 2);
-	set.Print();
-	set.Union(4,5);
-	set.Print();
-	set.Union(4,1);
-	set.Print();
 }

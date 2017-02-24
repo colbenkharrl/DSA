@@ -1,4 +1,4 @@
-//      Colben Kharrl | HEAP DATA STRUCTURE (for dynamic arrays)
+//      Colben Kharrl | MAX-HEAP DATA STRUCTURE (for dynamic arrays)
 
 #include "heap.h"
 #include <iostream>
@@ -6,22 +6,22 @@
 
 using namespace std;
 //	returns index of parent node
-int Heap::Parent(int i)
+int MaxHeap::Parent(int i)
 {
     return i / 2;
 }
 //	returns index of left child
-int Heap::Left(int i)
+int MaxHeap::Left(int i)
 {
     return 2 * i;
 }
 //	returns index of right child
-int Heap::Right(int i)
+int MaxHeap::Right(int i)
 {
     return 2 * i + 1;
 }
 //	recursively apply the heap property to nodes at and below index
-void Heap::Heapify(int i)
+void MaxHeap::Heapify(int i)
 {
     int largest, temp;
     int l = Left(i);
@@ -47,7 +47,7 @@ void Heap::Heapify(int i)
     }
 }
 //	build a heap from an array
-void Heap::BuildHeap()
+void MaxHeap::BuildHeap()
 {
     for (int i = heaplength / 2; i > 0; i--)
     {
@@ -55,14 +55,14 @@ void Heap::BuildHeap()
     }
 }
 //	constructor to build the array internally
-Heap::Heap(int length)
+MaxHeap::MaxHeap(int length)
 {
     heaplength = 0;
     A = new int[length];
     passed = 0;
 }
 //	constructor to pass an existing dynamic array
-Heap::Heap(int *I, int length)
+MaxHeap::MaxHeap(int *I, int length)
 {
     A = I;
     heaplength = length;
@@ -70,7 +70,7 @@ Heap::Heap(int *I, int length)
     passed = 1;
 }
 //	destructor to delete the array if it was created internally
-Heap::~Heap()
+MaxHeap::~MaxHeap()
 {
     if (!passed)
     {
@@ -78,12 +78,12 @@ Heap::~Heap()
     }
 }
 //	return the largest key in the heap
-int Heap::Maximum()
+int MaxHeap::Maximum()
 {
     return A[0];
 }
 //	remove and return the largest key node
-int Heap::ExtractMax()
+int MaxHeap::ExtractMax()
 {
     int max;
     if (heaplength <= 1)
@@ -101,7 +101,7 @@ int Heap::ExtractMax()
     }
 }
 //	insert a node with value key into the heap
-void Heap::Insert(int key)
+void MaxHeap::Insert(int key)
 {
     int i;
     heaplength++;
@@ -109,7 +109,7 @@ void Heap::Insert(int key)
     IncreaseKey(heaplength, key);
 }
 //	increase the key of value at index
-void Heap::IncreaseKey(int i, int key)
+void MaxHeap::IncreaseKey(int i, int key)
 {
     int temp;
     if (key < A[i - 1])
@@ -129,7 +129,124 @@ void Heap::IncreaseKey(int i, int key)
     }
 }
 //	print the heap
-void Heap::Print()
+void MaxHeap::Print()
+{
+    for (int i = 0; i < heaplength; i++)
+    {
+	cout << A[i] << " ";
+    }
+    cout << endl;
+}
+
+//
+//	MIN-HEAP DATA STRUCTURE (for dynamic arrays)
+//
+
+MinHeap::MinHeap(int length) {
+	heaplength = 0;
+    A = new int[length];
+    passed = 0;
+}
+MinHeap::MinHeap(int *I, int length) {
+	A = I;
+    heaplength = length;
+    BuildHeap();
+    passed = 1;
+}
+MinHeap::~MinHeap() {
+	if (!passed)
+    {
+	delete[] A;
+    }
+}
+void MinHeap::Heapify(int i) {
+	int smallest, temp;
+    int l = Left(i);
+    int r = Right(i);
+    if (l <= heaplength && A[l - 1] < A[i - 1])
+    {
+	smallest = l;
+    }
+    else
+    {
+	smallest = i;
+    }
+    if (r <= heaplength && A[r - 1] < A[smallest - 1])
+    {
+	smallest = r;
+    }
+    if (smallest != i)
+    {
+	temp = A[i - 1];
+	A[i - 1] = A[smallest - 1];
+	A[smallest - 1] = temp;
+	Heapify(smallest);
+    }
+}
+void MinHeap::BuildHeap() {
+	for (int i = heaplength / 2; i > 0; i--)
+    {
+	Heapify(i);
+    }
+}
+int MinHeap::Minimum() {
+	return A[0];
+}
+int MinHeap::ExtractMin() {
+	int min;
+    if (heaplength <= 1)
+    {
+	cout << "Error: no elements to be extracted." << endl;
+	return -1;
+    }
+    else
+    {
+	min = A[0];
+	A[0] = A[heaplength - 1];
+	heaplength--;
+	Heapify(0);
+	return min;
+    }
+}
+void MinHeap::Insert(int key) {
+	int i;
+    heaplength++;
+    A[heaplength] = 0 - numeric_limits<int>::max();
+    DecreaseKey(heaplength, key);
+}
+void MinHeap::DecreaseKey(int i, int key) {
+	int temp;
+    if (key > A[i - 1])
+    {
+	cout << "Error: new key larger than current key." << endl;
+    }
+    else
+    {
+	A[i - 1] = key;
+	while (i > 1 && A[Parent(i) - 1] > A[i - 1])
+	{
+	    temp = A[i - 1];
+	    A[i - 1] = A[Parent(i) - 1];
+	    A[Parent(i) - 1] = temp;
+	    i = Parent(i);
+	}
+    }
+}
+int MinHeap::Parent(int i)
+{
+    return i / 2;
+}
+//	returns index of left child
+int MinHeap::Left(int i)
+{
+    return 2 * i;
+}
+//	returns index of right child
+int MinHeap::Right(int i)
+{
+    return 2 * i + 1;
+}
+void MinHeap::Print()
 {
     for (int i = 0; i < heaplength; i++)
     {

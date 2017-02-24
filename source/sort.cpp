@@ -68,7 +68,7 @@ void MergeSort(int *A, int p, int r) {
 }
 void HeapSort(int *A, int length) {
   int temp, i;
-  Heap heap(A, length);
+  MaxHeap heap(A, length);
   for (i = length - 1; i > 0; i--) {
     temp = A[0];
     A[0] = A[i];
@@ -186,7 +186,6 @@ int Select(int *A, int i, int p, int r) {
   x = Select(medians, int(ceil(double(arrays-1)/2)), 0, arrays - 1);		// 3
   delete [] medians;
   k = PartitionAt(A, p, r, x);		// 4
-  PrintList(A, p, r);
   if (i == k) {		// 5
     return x;
   } else if (i < k) {

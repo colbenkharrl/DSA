@@ -1,3 +1,5 @@
+//	Colben Kharrl | DISJOINT SET DATA STRUCTURE (dynamic array)
+
 #include "dset.h"
 #include <iostream>
 
@@ -27,14 +29,15 @@ void DisjointSet::Link(int x, int y) {
 		A[x] = y;
 	}
 }
-int DisjointSet::FindSet(int x) {
+int DisjointSet::FindSet(int x) {	//	with path compression
 	if (A[x] <= 0) {
 		return x;
 	} else {
-		return FindSet(A[x]);
+		A[x] = FindSet(A[x]);
+		return A[x];
 	}
 }
-void DisjointSet::Union(int x, int y) {
+void DisjointSet::Union(int x, int y) {	//	union by rank
 	Link(FindSet(x), FindSet(y));
 }
 
