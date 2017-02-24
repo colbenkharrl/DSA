@@ -27,6 +27,7 @@ int main()
     int length = 20, x;
     int *A = new int[length];
 	Randomize(A, length);
+	cout << "Min-Heap: " << endl;
 	MinHeap heap (A, length);
     PrintList(A, 0, length-1);
 }
