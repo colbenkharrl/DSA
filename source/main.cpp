@@ -1,21 +1,29 @@
-#include "dset.h"
-#include "heap.h"
-#include "queue.h"
-#include "sort.h"
-#include "stack.h"
+#include "../header/dset.h"
+#include "../header/bst.h"
+#include "../header/heap.h"
+#include "../header/queue.h"
+#include "../header/sort.h"
+#include "../header/stack.h"
+#include "../header/util.h"
 
 #include <iostream>
-#include <cstdlib>
 
-//	used for testing and debugging
 using namespace std;
 
-int main()
-{
-    int length = 20;
-    int *A = new int[length];
-	FillReverse(A, length);
-	cout << "Min-Heap: " << endl;
-	MinHeap heap (A, length);
-    Print(A, 0, length-1);
+//	used for testing and debugging
+
+int main() {
+	BST tree;
+	tree.Insert(new Node(5));
+	tree.Insert(new Node(1));
+	tree.Insert(new Node(2));
+	tree.Insert(new Node(8));
+	tree.Insert(new Node(10));
+	tree.PrintInOrder(tree.root);
+	cout << endl;
+	cout << "Printing successor of 8" << endl;
+	Node *s = tree.Search(tree.root, 8);
+	cout << tree.Successor(s)->key << endl;
+	cout << "Printing predecessor of 8" << endl;
+	cout << tree.Predecessor(s)->key << endl;
 }

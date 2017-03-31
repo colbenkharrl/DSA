@@ -1,49 +1,27 @@
 //      Colben Kharrl | SORTING ALGORITHMS (for dynamic arrays)
 
-#include "sort.h"
-#include "heap.h"
+#include "../header/sort.h"
+#include "../header/heap.h"
+#include "../header/util.h"
+
 #include <iostream>
-#include <math.h>
 #include <limits>
+#include <math.h>
 
 using namespace std;
 
-//	print dynamic array from index start to end
-void Print(int *A, int p, int r) {
-  int i;
-  for (i = p; i <= r; i++) {
-    cout << A[i] << " ";
-  }
-  cout << endl;
-}
-void Randomize(int *A, int length)
-{
-    srand(time(0));
-    int element;
-    for (int i = 0; i < length; i++) // fill array with random numbers
-    {
-		element = rand() % 100 + 1; //element E[1,100]
-		A[i] = element;
-    }
-    Print(A, 0, length - 1);
-}
-void FillReverse(int *A, int length) {
-	int j = length;
-	for (int i = 0; i < length; i++) // fill array with reverse sorted numbers
-    {
-		A[i] = j;
-		j--;
-    }
-	Print(A, 0, length - 1);
-}
 void InsertionSort(int *A, int length) {
   int key, i, j;
   for (j = 1; j < length; j++) {
     key = A[j];
     i = j - 1;
-    while (i > -1 and A[i] > key) {
-      A[i + 1] = A[i];
-      i = i - 1;
+    while (i > -1) {
+      if (A[i] > key) {
+        A[i + 1] = A[i];
+        i = i - 1;
+      } else {
+        break;
+      }
     }
     A[i + 1] = key;
   }
@@ -74,8 +52,8 @@ void Merge(int *A, int p, int q, int r) {
       j++;
     }
   }
-  delete [] L;
-  delete [] R;
+  delete[] L;
+  delete[] R;
 }
 void MergeSort(int *A, int p, int r) {
   int q;
@@ -126,6 +104,7 @@ int Partition(int *A, int p, int r) {
       temp = A[i];
       A[i] = A[j];
       A[j] = temp;
+    } else {
     }
   }
   temp = A[i + 1];
@@ -158,25 +137,29 @@ int PartitionAt(int *A, int p, int r, int k) {
   A[r] = temp;
   return i + 2 - p;
 }
-//	recursively selects ith smallest element using Median-of-Medians method:
-//
+
 //	5 steps:
-//		1. Divide the n elements of the input array into floor(n/5) groups
-//			of 5 elements each and at most one group made up of the remaining 
-//			n mod 5 elements.
+//		1. Divide the n elements of the input array into floor(n/5)
+// groups
+// of 5 elements each and at most one group made up of the remaining n mod 5
+// elements.
 //		2. Find the median of each of the ceiling(n/5) groups by first
-//			insertion-sorting the elements of each group (of which there are at
-//			most 5) and then picking the median from the sorted list of group elements.
-//		3. Use SELECT recursively to find the median x of the ceiling(n/5) medians found
-//			in step 2. (If there are an even number of medians, then by my convention, x
-//			is the higher median.)
-//		4. Partition the input array around the median-of-medians x using the modified
-//			version of PARTITION. Let k be one more than the number of elements on the
-//			low side of the partition, so that x is the kth smallest element and there are n-k
-//			elements on the high side of the partition.
-//		5. If i != k, then return x. Otherwise, use SELECT recursively to find the ith
-//			smallest element on the low side if i < k, or the (i-k)th smallest element on
-//			the high side if i > k.
+// insertion-sorting the elements of each group (of which there are at most 5)
+// and then picking the median from the sorted list of group elements.
+//		3. Use SELECT recursively to find the median x of the
+// ceiling(n/5)
+// medians found in step 2. (If there are an even number of medians, then by my
+// convention, x is the lower median.)
+//		4. Partition the input array around the median-of-medians x
+// using
+// the modified version of PARTITION. Let k be one more than the number of
+// elements on the low side of the partition, so that x is the kth smallest
+// element and there are n-k elements on the high side of the partition.
+//		5. If i != k, then return x. Otherwise, use SELECT recursively
+// to
+// find the ith smallest element on the low side if i < k, or the (i-k)th
+// smallest element on the high side if i > k.
+
 int Select(int *A, int i, int p, int r) {
   int length, arrays, x, k, j, l, startIn, endIn;
   int *medians, *arr;
@@ -184,9 +167,9 @@ int Select(int *A, int i, int p, int r) {
   if (length == 1) {
     return A[p];
   }
-  arrays = int(ceil(double(length)/5));
+  arrays = int(ceil(double(length) / 5));
   medians = new int[arrays];
-  for (j = 0; j < arrays; j++) {	// 1
+  for (j = 0; j < arrays; j++) { // 1
     startIn = p + j * 5;
     if (j == arrays - 1) {
       endIn = r;
@@ -199,18 +182,18 @@ int Select(int *A, int i, int p, int r) {
     for (l = 0; l < length; l++) {
       arr[l] = A[startIn + l];
     }
-    InsertionSort(arr, length);		// 2
-	medians[j] = arr[int(floor(double(length-1)/2))];
-	delete [] arr;
+    InsertionSort(arr, length); // 2
+    medians[j] = arr[int(floor(double(length - 1) / 2))];
+    delete[] arr;
   }
-  x = Select(medians, int(ceil(double(arrays-1)/2)), 0, arrays - 1);		// 3
-  delete [] medians;
-  k = PartitionAt(A, p, r, x);		// 4
-  if (i == k) {		// 5
+  x = Select(medians, int(ceil(double(arrays - 1) / 2)), 0, arrays - 1); // 3
+  delete[] medians;
+  k = PartitionAt(A, p, r, x); // 4
+  if (i == k) {                // 5
     return x;
   } else if (i < k) {
     return Select(A, i, p, k - 2);
   } else {
-    return Select(A, i - k, p+k, r);
+    return Select(A, i - k, p + k, r);
   }
 }

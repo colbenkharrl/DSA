@@ -6,7 +6,5 @@ void QuickSort(int *A, int p, int r);
 void BubbleSort(int* A, int length);
 int Partition(int *A, int p, int r);
 void Print(int *A, int p, int r);
-void Randomize(int *A, int length);
-void FillReverse(int *A, int length);
 int PartitionAt(int *A, int p, int r, int k);
 int Select(int *A, int i, int p, int r);

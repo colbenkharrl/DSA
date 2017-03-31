@@ -1,6 +1,7 @@
 //	Colben Kharrl | STACK DATA STRUCTURE (dynamic array)
 
-#include "stack.h"
+#include "../header/stack.h"
+#include "../header/util.h"
 #include <iostream>
 
 using namespace std;

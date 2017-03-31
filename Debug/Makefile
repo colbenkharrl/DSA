@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+source/bst.o: source/bst.cpp.o
+
+.PHONY : source/bst.o
+
+# target to build an object file
+source/bst.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/bst.cpp.o
+.PHONY : source/bst.cpp.o
+
+source/bst.i: source/bst.cpp.i
+
+.PHONY : source/bst.i
+
+# target to preprocess a source file
+source/bst.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/bst.cpp.i
+.PHONY : source/bst.cpp.i
+
+source/bst.s: source/bst.cpp.s
+
+.PHONY : source/bst.s
+
+# target to generate assembly for a file
+source/bst.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/bst.cpp.s
+.PHONY : source/bst.cpp.s
+
 source/dset.o: source/dset.cpp.o
 
 .PHONY : source/dset.o
@@ -285,6 +312,60 @@ source/stack.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/stack.cpp.s
 .PHONY : source/stack.cpp.s
 
+source/util.o: source/util.cpp.o
+
+.PHONY : source/util.o
+
+# target to build an object file
+source/util.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/util.cpp.o
+.PHONY : source/util.cpp.o
+
+source/util.i: source/util.cpp.i
+
+.PHONY : source/util.i
+
+# target to preprocess a source file
+source/util.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/util.cpp.i
+.PHONY : source/util.cpp.i
+
+source/util.s: source/util.cpp.s
+
+.PHONY : source/util.s
+
+# target to generate assembly for a file
+source/util.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/util.cpp.s
+.PHONY : source/util.cpp.s
+
+source/validate.o: source/validate.cpp.o
+
+.PHONY : source/validate.o
+
+# target to build an object file
+source/validate.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/validate.cpp.o
+.PHONY : source/validate.cpp.o
+
+source/validate.i: source/validate.cpp.i
+
+.PHONY : source/validate.i
+
+# target to preprocess a source file
+source/validate.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/validate.cpp.i
+.PHONY : source/validate.cpp.i
+
+source/validate.s: source/validate.cpp.s
+
+.PHONY : source/validate.s
+
+# target to generate assembly for a file
+source/validate.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/validate.cpp.s
+.PHONY : source/validate.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -294,6 +375,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... source/bst.o"
+	@echo "... source/bst.i"
+	@echo "... source/bst.s"
 	@echo "... source/dset.o"
 	@echo "... source/dset.i"
 	@echo "... source/dset.s"
@@ -312,6 +396,12 @@ help:
 	@echo "... source/stack.o"
 	@echo "... source/stack.i"
 	@echo "... source/stack.s"
+	@echo "... source/util.o"
+	@echo "... source/util.i"
+	@echo "... source/util.s"
+	@echo "... source/validate.o"
+	@echo "... source/validate.i"
+	@echo "... source/validate.s"
 .PHONY : help
 
 
