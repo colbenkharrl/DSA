@@ -20,3 +20,4 @@ Dynamic memory used as much as possible.
   2. Queue
   3. Heap (min and max)
   4. Disjoint Set (path compression)
+  5. Binary Search Tree
