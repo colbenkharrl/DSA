@@ -258,6 +258,33 @@ source/queue.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/queue.cpp.s
 .PHONY : source/queue.cpp.s
 
+source/rbt.o: source/rbt.cpp.o
+
+.PHONY : source/rbt.o
+
+# target to build an object file
+source/rbt.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/rbt.cpp.o
+.PHONY : source/rbt.cpp.o
+
+source/rbt.i: source/rbt.cpp.i
+
+.PHONY : source/rbt.i
+
+# target to preprocess a source file
+source/rbt.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/rbt.cpp.i
+.PHONY : source/rbt.cpp.i
+
+source/rbt.s: source/rbt.cpp.s
+
+.PHONY : source/rbt.s
+
+# target to generate assembly for a file
+source/rbt.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/rbt.cpp.s
+.PHONY : source/rbt.cpp.s
+
 source/sort.o: source/sort.cpp.o
 
 .PHONY : source/sort.o
@@ -390,6 +417,9 @@ help:
 	@echo "... source/queue.o"
 	@echo "... source/queue.i"
 	@echo "... source/queue.s"
+	@echo "... source/rbt.o"
+	@echo "... source/rbt.i"
+	@echo "... source/rbt.s"
 	@echo "... source/sort.o"
 	@echo "... source/sort.i"
 	@echo "... source/sort.s"

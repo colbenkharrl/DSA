@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Node::Node(int k) {
+BNode::BNode(int k) {
 	key = k;
 	l = NULL;
 	r = NULL;
@@ -15,31 +15,31 @@ Node::Node(int k) {
 BST::BST() {
 	root = NULL;
 }
-BST::BST(Node *r) {
+BST::BST(BNode *r) {
 	root = r;
 }
-void BST::PrintInOrder(Node *x) {
+void BST::PrintInOrder(BNode *x) {
 	if (x != NULL) {
 		PrintInOrder(x->l);
 		cout << x->key << " ";
 		PrintInOrder(x->r);
 	}
 }
-void BST::PrintPreOrder(Node *x) {
+void BST::PrintPreOrder(BNode *x) {
 	if (x != NULL) {
 		cout << x->key << " ";
 		PrintInOrder(x->l);
 		PrintInOrder(x->r);
 	}
 }
-void BST::PrintPostOrder(Node *x) {
+void BST::PrintPostOrder(BNode *x) {
 	if (x != NULL) {
 		PrintInOrder(x->l);
 		PrintInOrder(x->r);
 		cout << x->key << " ";
 	}
 }
-Node* BST::Search(Node *x, int k) {
+BNode* BST::Search(BNode *x, int k) {
 	if (x == NULL || x->key == k) {
 		return x;
 	}
@@ -49,7 +49,7 @@ Node* BST::Search(Node *x, int k) {
 		return Search(x->r, k);
 	}
 }
-Node* BST::SearchIterative(Node *x, int k) {
+BNode* BST::SearchIterative(BNode *x, int k) {
 	while (x != NULL && k != x->key) {
 		if (k < x->key) {
 			x = x->l;
@@ -59,20 +59,20 @@ Node* BST::SearchIterative(Node *x, int k) {
 	}
 	return x;
 }
-Node* BST::Minimum(Node *x) {
+BNode* BST::Minimum(BNode *x) {
 	while (x->l != NULL) {
 		x = x->l;
 	}
 	return x;
 }
-Node* BST::Maximum(Node *x) {
+BNode* BST::Maximum(BNode *x) {
 	while (x->r != NULL) {
 		x = x->r;
 	}
 	return x;
 }
-Node* BST::Successor(Node *x) {
-	Node *y;
+BNode* BST::Successor(BNode *x) {
+	BNode *y;
 	if (x->r != NULL) {
 		return Minimum(x->r);
 	}
@@ -83,8 +83,8 @@ Node* BST::Successor(Node *x) {
 	}
 	return y;
 }
-Node* BST::Predecessor(Node *x) {
-	Node *y;
+BNode* BST::Predecessor(BNode *x) {
+	BNode *y;
 	if (x->l != NULL) {
 		return Maximum(x->l);
 	}
@@ -95,9 +95,9 @@ Node* BST::Predecessor(Node *x) {
 	}
 	return y;
 }
-void BST::Insert(Node *z) {
-	Node *y = NULL;
-	Node *x = root;
+void BST::Insert(BNode *z) {
+	BNode *y = NULL;
+	BNode *x = root;
 	while (x != NULL) {
 		y = x;
 		if (z->key < x->key) {
@@ -115,7 +115,7 @@ void BST::Insert(Node *z) {
 		y->r = z;
 	}
 }
-void BST::Transplant(Node *u, Node *v) {
+void BST::Transplant(BNode *u, BNode *v) {
 	if (u->p == NULL) {
 		root = v;
 	} else if (u == u->p->l) {
@@ -127,8 +127,8 @@ void BST::Transplant(Node *u, Node *v) {
 		v->p = u->p;
 	}
 }
-void BST::Delete(Node *z) {
-	Node *y;
+void BST::Delete(BNode *z) {
+	BNode *y;
 	if (z->l == NULL) {
 		Transplant(z, z->r);
 	} else if (z->r == NULL) {

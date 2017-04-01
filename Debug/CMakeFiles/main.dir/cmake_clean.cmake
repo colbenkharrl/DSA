@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/source/util.cpp.o"
   "CMakeFiles/main.dir/source/validate.cpp.o"
   "CMakeFiles/main.dir/source/bst.cpp.o"
+  "CMakeFiles/main.dir/source/rbt.cpp.o"
   "main.pdb"
   "main"
 )

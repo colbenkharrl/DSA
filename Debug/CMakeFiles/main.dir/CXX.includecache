@@ -14,6 +14,8 @@
 
 /Users/colben/Documents/VSCode/DSA/header/queue.h
 
+/Users/colben/Documents/VSCode/DSA/header/rbt.h
+
 /Users/colben/Documents/VSCode/DSA/header/sort.h
 
 /Users/colben/Documents/VSCode/DSA/header/stack.h
@@ -49,6 +51,8 @@ limits
 /Users/colben/Documents/VSCode/DSA/header/dset.h
 ../header/bst.h
 /Users/colben/Documents/VSCode/DSA/header/bst.h
+../header/rbt.h
+/Users/colben/Documents/VSCode/DSA/header/rbt.h
 ../header/heap.h
 /Users/colben/Documents/VSCode/DSA/header/heap.h
 ../header/queue.h
@@ -65,6 +69,14 @@ iostream
 /Users/colben/Documents/VSCode/DSA/source/queue.cpp
 ../header/queue.h
 /Users/colben/Documents/VSCode/DSA/header/queue.h
+../header/util.h
+/Users/colben/Documents/VSCode/DSA/header/util.h
+iostream
+-
+
+/Users/colben/Documents/VSCode/DSA/source/rbt.cpp
+../header/rbt.h
+/Users/colben/Documents/VSCode/DSA/header/rbt.h
 ../header/util.h
 /Users/colben/Documents/VSCode/DSA/header/util.h
 iostream

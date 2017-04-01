@@ -1,26 +1,26 @@
-struct Node {
+struct BNode {
 	int key;
-	Node *p;
-	Node *l;
-	Node *r;
-	Node(int k);
+	BNode *p;
+	BNode *l;
+	BNode *r;
+	BNode(int k);
 };
 
 class BST {
  public:
-	Node *root;
+	BNode *root;
 	BST();
-	BST(Node *r);
-	void PrintInOrder(Node *x);
-	void PrintPreOrder(Node *x);
-	void PrintPostOrder(Node *x);
-	Node* Search(Node *x, int k);
-	Node* SearchIterative(Node *x, int k);
-	Node* Minimum(Node *x);
-	Node* Maximum(Node *x);
-	Node* Successor(Node *x);
-	Node* Predecessor(Node *x);
-	void Insert(Node *z);
-	void Transplant(Node *u, Node *v);
-	void Delete(Node *z);
+	BST(BNode *r);
+	void PrintInOrder(BNode *x);
+	void PrintPreOrder(BNode *x);
+	void PrintPostOrder(BNode *x);
+	BNode* Search(BNode *x, int k);
+	BNode* SearchIterative(BNode *x, int k);
+	BNode* Minimum(BNode *x);
+	BNode* Maximum(BNode *x);
+	BNode* Successor(BNode *x);
+	BNode* Predecessor(BNode *x);
+	void Insert(BNode *z);
+	void Transplant(BNode *u, BNode *v);
+	void Delete(BNode *z);
 };
