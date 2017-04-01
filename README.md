@@ -3,7 +3,7 @@ Data Structures and Algorithms (CSE310)
 
 Playground for learning Data Structures and Algorithms, following "Introduction to Algorithms" by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
 
-Dynamic memory used as much as possible.
+Primarily use dynamic memory.
 
 # Currently Implemented:
 
@@ -20,3 +20,4 @@ Dynamic memory used as much as possible.
   2. Queue
   3. Heap (min and max)
   4. Disjoint Set (path compression)
+  5. Binary Search Tree
