@@ -21,3 +21,4 @@ Primarily use dynamic memory.
   3. Heap (min and max)
   4. Disjoint Set (path compression)
   5. Binary Search Tree
+  6. Red-Black Tree
